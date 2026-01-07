@@ -104,16 +104,17 @@ export function InquiryModal({
           {children}
         </DialogTrigger>
       )}
-      <DialogContent 
-        showCloseButton={false}
-            className="sm:max-w-[550px] w-full sm:w-[95vw] rounded-none sm:rounded-[2.5rem] border-zinc-100 dark:border-zinc-800 shadow-2xl overflow-hidden p-0 h-full sm:h-auto max-h-screen sm:max-h-[90vh] flex flex-col"
-          >
-            <button 
-              onClick={() => setIsOpen(false)}
-              className="absolute top-4 sm:top-6 right-4 sm:right-6 z-50 h-10 w-10 flex items-center justify-center rounded-full bg-black/20 hover:bg-black/40 backdrop-blur-md text-white transition-all active:scale-95 shadow-lg"
+        <DialogContent 
+          showCloseButton={false}
+              className="sm:max-w-[550px] w-full sm:w-[95vw] rounded-none sm:rounded-[3rem] border-zinc-100 dark:border-zinc-800 shadow-2xl overflow-hidden p-0 h-full sm:h-auto max-h-screen sm:max-h-[90vh] flex flex-col group/modal"
             >
-              <X size={20} strokeWidth={3} />
-            </button>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/5 pointer-events-none" />
+              <button 
+                onClick={() => setIsOpen(false)}
+                className="absolute top-4 sm:top-6 right-4 sm:right-6 z-50 h-10 w-10 flex items-center justify-center rounded-full bg-black/20 hover:bg-black/40 backdrop-blur-md text-white transition-all active:scale-95 shadow-lg group-hover/modal:scale-110"
+              >
+                <X size={20} strokeWidth={3} />
+              </button>
           
           <AnimatePresence mode="wait">
             {!isSubmitted ? (
