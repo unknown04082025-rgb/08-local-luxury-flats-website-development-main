@@ -79,7 +79,7 @@ export default function LandingPage() {
           />
         </motion.div>
         
-        <div className="container relative z-10 px-4 md:px-6 text-center text-white pt-20 sm:pt-36 flex flex-col items-center">
+        <div className="container relative z-10 px-4 md:px-6 text-center text-white pt-32 sm:pt-48 flex flex-col items-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
